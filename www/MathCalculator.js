@@ -1,6 +1,7 @@
 var exec = require('cordova/exec');
 
 module.exports.add = function (arg0, success, error) {
+  console.log(arg0);
   exec(success, error, 'MathCalculator', 'add', [arg0]);
 };
 
