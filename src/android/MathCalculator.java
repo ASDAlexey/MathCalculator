@@ -25,7 +25,7 @@ public class MathCalculator extends CordovaPlugin {
     private void add(JSONArray args, CallbackContext callback) {
         if(args != null) {
             try {
-                callback.success("" + 10));
+                callback.success("" + 10);
             } catch(Exception ex) {
                 callback.error("Something went wrong " + ex);
             }
