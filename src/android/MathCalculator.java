@@ -11,10 +11,14 @@ import android.util.Log;
 public class MathCalculator extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
-        Log.d("MyApp", "1");
-        callbackContext.success();
-
-        return true;
+        if(action.equals("add")) {
+            this.add(args, callbackContext);
+            return true;
+        } else if(action.equals("substract")) {
+            this.substract(args, callbackContext);
+            return true;
+        }
+        return false;
     }
 
     private void add(JSONArray args, CallbackContext callback) {
